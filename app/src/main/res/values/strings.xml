@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">帳本</string>
+    <string name="income">收入/支出</string>
+    <string name="amount">金額:</string>
+    <string name="time">日期:</string>
+    <string name="details">明細:</string>
+    <string name="remark">備註:</string>
+    <string name="sumOfExpenses">總支出:</string>
+    <string name="sumOfRevenue">總收入:</string>
+
+    <string name="select_title">收入支出</string>
+    <string-array name="spn_list">
+        <item>支出</item>
+    </string-array>
+
+    <string name="others">Others</string>
+    <string name="makeNote">記一筆</string>
+    <string name="ledger">帳本</string>
+    <string name="newAccount">帳戶</string>
+
+    <string name="navigation_expenditure_Revenue">收入</string>
+    <string name="navigation_expenditure_Expenses">支出</string>
+
+</resources>

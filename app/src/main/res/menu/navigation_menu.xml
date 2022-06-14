@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/menuLedger"
+                android:title="@string/ledger"/>
+            <item
+                android:id="@+id/menuMakeNote"
+                android:title="@string/makeNote"/>
+            <item
+                android:id="@+id/menuNewAccount"
+                android:title="@string/newAccount"/>
+        </menu>
+    </item>
+</menu>
+    <!--android:icon="@drawable/support"-->

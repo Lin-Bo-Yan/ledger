@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.makeNoteFragment"
+    android:id="@+id/frameLayout">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:id="@+id/constraintLayout">
+
+
+    <LinearLayout
+        android:id="@+id/spnnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/expenditure"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:entries="@array/spn_list" />
+<!--        android:spinnerMode="dialog"-->
+    </LinearLayout>
+
+    ---------------------------------------------------------------------
+
+    第一層
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/accountNameLayout"
+        android:layout_marginBottom="50dp">
+        第二層 上面
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintHorizontal_bias="1.0">
+
+            第三層 圖片
+
+            飲食
+            <LinearLayout
+                android:id="@+id/diet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="77dp"
+                    android:padding="1dp"
+                    android:src="@drawable/breakfast" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="飲食"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            交通
+            <LinearLayout
+                android:id="@+id/transportation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/transportation"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="交通"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            醫藥
+            <LinearLayout
+                android:id="@+id/medicine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/medicine"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="醫藥"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        第二層 中間
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintHorizontal_bias="1.0">
+
+            第三層 圖片
+            購物
+            <LinearLayout
+                android:id="@+id/shopping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/shopping"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="購物"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            居家
+            <LinearLayout
+                android:id="@+id/supplies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/supplies"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居家"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            娛樂
+            <LinearLayout
+                android:id="@+id/entertainment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/entertainment"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="娛樂"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        第二層 下面
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintHorizontal_bias="1.0">
+
+            第三層 圖片
+            其他
+            <LinearLayout
+                android:id="@+id/other"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/other"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            收入
+            <LinearLayout
+                android:id="@+id/income"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_stock"
+                    android:padding="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收入"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    ---------------------------------------------------------------------
+    <LinearLayout
+        android:id="@+id/accountNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/needLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:text="帳戶："
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent">
+            <Spinner
+                android:id="@+id/accountName"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+    android:id="@+id/needLayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/dataLayout">
+
+    <TextView
+        android:id="@+id/need"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:hint="記帳"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:hint="在此輸入金額"
+        android:inputType="number|phone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/newButton">
+
+        <Button
+            android:id="@+id/data"
+            android:text="選擇日期"
+            android:backgroundTint="@color/black"
+            android:layout_width="0dp"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"/>
+
+        <EditText
+            android:id="@+id/chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:hint="想說什麼？"
+            android:inputType="textLongMessage"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/newButton"
+        android:text="新增"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/black"
+        app:layout_constraintHorizontal_bias="0.954"/>
+
+
+<!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--    android:id="@+id/bottomNavigationView"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    app:menu="@menu/navigation_expenditure"/>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:backgroundTint="@color/darkOrange"-->
+<!--        android:src="@drawable/ic_add"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.954"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

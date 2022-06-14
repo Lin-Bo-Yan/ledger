@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuLedger">
+
+    <fragment
+        android:id="@+id/menuLedger"
+        android:name="com.example.appone.Fragment.ledgerFragment"
+        android:label="Ledger"
+        tools:layout="@layout/ledger_fragment" />
+    <fragment
+        android:id="@+id/menuMakeNote"
+        android:name="com.example.appone.Fragment.makeNoteFragment"
+        android:label="make_note"
+        tools:layout="@layout/make_note_fragment" />
+    <fragment
+        android:id="@+id/menuNewAccount"
+        android:name="com.example.appone.Fragment.newAccountFragment"
+        android:label="new_account"
+        tools:layout="@layout/new_account_fragment" />
+</navigation>
